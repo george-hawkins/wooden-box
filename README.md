@@ -1,7 +1,11 @@
 Wooden box
 ==========
 
-See also [`masking.md`](masking.md).
+[![green box youtube](green-box-youtube.png)](https://www.youtube.com/watch?v=dia7phBWyx8)
+
+See also [`masking.md`](masking.md) and [`shadows.md`](shadows.md).
+
+Green box: [`track-21-green-box-final.blend`](track-21-green-box-final.blend)
 
 Rotating around an edge
 -----------------------
