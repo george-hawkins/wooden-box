@@ -5,7 +5,57 @@ Wooden box
 
 See also [`masking.md`](masking.md) and [`shadows.md`](shadows.md).
 
+Renders
+-------
+
+When combining the various clips use a right-to-left wipe so the set down box disappears and then the box appears in its start position for the next clip.
+
+For the objects in the boxes, I parented an empty to the _Distort Box_ and then added a _Copy Location_ constraint to the object. This was to avoid any distortion being applied to the object.
+
+### Green box
+
 Green box: [`track-21-green-box-final.blend`](track-21-green-box-final.blend)
+
+TODO: maybe re-render with new HDRI and perhaps do as grey viewport color rather than green. Show tracking, rotoscoping and shadows.
+
+### Plasma
+
+Plasma is a combination of a number of different renders:
+
+* `track-23-plasma-new-hdri.blend` - solid box (with shade for lid) with plasma material, rendered to `dc42442c-f65c-42b1-9856-6083776541b5`.
+* `track-26-ice-eye.blend` - box (with static outside) and eye, rendered to `2bbafed4-3e4b-4438-9182-360ab4827adb`.
+* `track-26-ice-eye-alpha.blend` - an alpha channel for the eye and the inside of the box, rendered locally to `renders/track-26-ice-eye-alpha.blend`.
+* `track-26-ice-eye-composite.blend` - the plasma box, the eye box with alpha combined, rendered locally to `renders/ice-eye-composite`.
+* `track-26-ice-eye-final.blend` - finished box composited with video and shadows, rendered locally to `renders/ice-eye-final-0001-1027.mkv`.
+
+Plasma material: <https://www.youtube.com/watch?v=rtPzXrZ23k0>
+Eyeball: <https://www.youtube.com/watch?v=j0DjQFD7TbM>
+Ice: Sanctus
+
+### Ring of power
+
+* `track-27-ring-filmic.blend` - the ring in a wooden box (I don't think filmic has any affect of the resulting `.exr` files), rendered to `f2ccb320-9a41-45f3-b30c-c2ee6932f1ac`.
+* `track-27-ring-composite.blend` - rendered box composited with video etc., rendered locally to `renders/ring-final-0001-1027.mkv`.
+
+Ring: <https://www.youtube.com/watch?v=I6tQBOzMGGg>
+Text: <https://commons.wikimedia.org/wiki/File:One_Ring_inscription.svg>
+Wood: Sanctus
+
+### World
+
+Believe it or not, the waves and the clouds are actually moving!
+
+You could render the stars as a separate view layer and add a glare node to make them sparkle a bit more. Or you could do something in the material to make them twinkle.
+
+* `track-29-planet-space-and-metal-box.blend` - box with space inside and metal outside.
+* `track-29-planet-all-space-box.blend` - box with space inside and out, rendered to `abd9e170-b9bb-4d07-8e86-a54dc33cfd39`.
+* `track-29-planet-composite.blend` - rendered box composited with video etc. rendered locally to `renders/planet-final-0001-1027.mkv`.
+
+I quite like the completely space colored box and the smart-metal is unbelievably expensive to render. But it's the metal that I want replaced with a fancy box.
+
+Note: for the eye, the bevel between inside and outside gets the ice material but for the world I think it's better if the outside box gets the bevel.
+
+World and space: <https://www.youtube.com/watch?v=fz7r-REHhQA>
 
 Rotating around an edge
 -----------------------
